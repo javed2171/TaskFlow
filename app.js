@@ -13,6 +13,10 @@ addTaskBtn.addEventListener("click", () => {
 
     task.textContent = taskText;
 
+    task.addEventListener("click", () => {
+    task.remove();
+});
+
     taskList.appendChild(task);
 
     taskInput.value = "";
