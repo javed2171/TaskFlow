@@ -11,7 +11,7 @@ addTaskBtn.addEventListener("click", () => {
 
     const task = document.createElement("li");
 
-    task.textContent = taskText;
+    task.textContent = `Task: ${taskText}`;
 
     task.addEventListener("click", () => {
     task.remove();
