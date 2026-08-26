@@ -17,6 +17,110 @@ body {
     max-width: 700px;
 }
 
+/* ========================================
+   Task Toolbar
+======================================== */
+
+.task-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.task-toolbar h2 {
+    margin: 0;
+}
+
+.task-count {
+    margin: 0.25rem 0 0;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+/* ========================================
+   Task Filter
+======================================== */
+.task-filter-section {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.task-filter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.task-filter label {
+    font-weight: 600;
+}
+
+.task-filter select {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    font: inherit;
+    cursor: pointer;
+}
+
+.task-filter select:focus {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+/* ========================================
+   Task List
+======================================== */
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.task-item.completed {
+    opacity: 0.65;
+}
+
+.task-item.completed .task-title {
+    text-decoration: line-through;
+}
+
+/* ========================================
+   Responsive Layout
+======================================== */
+
+@media (max-width: 600px) {
+    .task-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .task-filter {
+        justify-content: space-between;
+    }
+
+    .task-filter select {
+        flex: 1;
+    }
+}
+
 .task-form {
     display: flex;
     gap: 10px;
@@ -39,4 +143,29 @@ li {
 li:hover {
     background: #f0f0f0;
     cursor: pointer;
+}
+/* Style for each task container */
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Space between checkbox, text, and delete button */
+  padding: 10px 14px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Pushes the delete button to the far right edge */
+.task-item .delete-btn {
+  margin-left: auto;
+  
+  /* Basic optional styling for the delete button */
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: #888;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.task-item .delete-btn:hover {
+  color: #ff4d4d;
 }

@@ -13,7 +13,22 @@
     <main class="app">
         <h1>TaskFlow</h1>
         <p>My Task Manager</p>
-        <p>Organise your work, one task at a time.</p>
+
+        <section class="task-filter-section">
+            <div class="task-filter">
+                <label for="task-filter">Filter:</label>
+
+                <select id="taskFilter">
+                    <option value="all">All Tasks</option>
+                    <option value="completed">Completed</option>
+                    <option value="pending">Pending</option>
+                </select>
+
+                <p class="task-count">
+                    <span id="taskCount">0</span> Tasks
+                </p>
+            </div>
+        </section>
 
         <div class="task-form">
             <input id="taskInput" type="text" placeholder="Enter a task">
@@ -23,7 +38,9 @@
             </button>
         </div>
 
-        <ul id="taskList"></ul>
+        <ul id="taskList" class="task-list">
+            <!-- task will be rendered by javascript -->
+        </ul>
     </main>
 
     <script src="app.js"></script>
